@@ -46,6 +46,7 @@ namespace VendorTracker.Tests
       string result = newVendor.Description;
       Assert.AreEqual(description, result);
     }
+    [TestMethod]
     public void GetAll_ReturnsAllVendorObjects_VendorList()
     {
       string name01 = "Test Vendor01";
