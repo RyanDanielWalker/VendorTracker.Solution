@@ -70,7 +70,7 @@ namespace VendorTracker.Tests
       Vendor newVendor2 = new Vendor(name02, description02);
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
-
     }
+
   }
 }
