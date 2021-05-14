@@ -24,7 +24,7 @@ namespace OrderTracker.Tests
     {
       string title = "Bread";
       Order newOrder = new Order(title);
-      string result = "not like this";
+      string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
   }
