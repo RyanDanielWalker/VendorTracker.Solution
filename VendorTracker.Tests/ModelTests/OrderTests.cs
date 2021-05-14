@@ -88,6 +88,17 @@ namespace OrderTracker.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string title = "Bread";
+      string description = "bread";
+      int price = 142;
+      DateTime date = new DateTime(2021, 05, 14);
+      Order newOrder = new Order(title, description, price, date);
+      int result = 32;
+      Assert.AreEqual(1, result);
+    }
 
 
   }
