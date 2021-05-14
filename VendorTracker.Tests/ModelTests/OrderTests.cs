@@ -99,6 +99,22 @@ namespace OrderTracker.Tests
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string title1 = "Bread1";
+      string title2 = "Bread2";
+      string description1 = "bread1";
+      string description2 = "bread2";
+      int price1 = 142;
+      int price2 = 143;
+      DateTime date1 = new DateTime(2021, 05, 14);
+      DateTime date2 = new DateTime(2021, 05, 14);
+      Order newOrder1 = new Order(title1, description1, price1, date1);
+      Order newOrder2 = new Order(title2, description2, price2, date2);
+      Order result = Order.Find(40);
+      Assert.AreEqual(newOrder1, result);
+    }
 
 
   }
