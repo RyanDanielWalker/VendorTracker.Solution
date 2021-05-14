@@ -61,7 +61,7 @@ namespace OrderTracker.Tests
       int price = 142;
       DateTime date = new DateTime(2021, 05, 14);
       Order newOrder = new Order(title, description, price, date);
-      DateTime result = new DateTime(06 / 14 / 2021);
+      DateTime result = newOrder.Date;
       Assert.AreEqual(date, result);
     }
 

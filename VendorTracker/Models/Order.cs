@@ -17,7 +17,7 @@ namespace VendorTracker.Models
       Title = orderTitle;
       Description = orderDescription;
       Price = orderPrice;
-      // Date = orderDate;
+      Date = orderDate;
       // _instances.Add(this);
       // Id = _instances.Count;
     }
