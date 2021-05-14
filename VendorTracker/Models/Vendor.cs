@@ -29,5 +29,9 @@ namespace VendorTracker.Models
     {
       _instances.Clear();
     }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 }

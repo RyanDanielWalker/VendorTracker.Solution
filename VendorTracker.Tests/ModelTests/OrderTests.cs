@@ -115,7 +115,6 @@ namespace OrderTracker.Tests
       Order result = Order.Find(1);
       Assert.AreEqual(newOrder1, result);
     }
-
-
   }
 }
+
