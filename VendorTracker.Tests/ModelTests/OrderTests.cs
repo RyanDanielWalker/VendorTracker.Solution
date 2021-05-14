@@ -16,7 +16,8 @@ namespace OrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstancesOfOrder_Order()
     {
-      Order newOrder = new Order("test", "description", 1);
+      DateTime date = new DateTime(01 / 01 / 2021);
+      Order newOrder = new Order("test", "description", 1, date);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod]
@@ -25,7 +26,8 @@ namespace OrderTracker.Tests
       string title = "Bread";
       string description = "bread";
       int price = 142;
-      Order newOrder = new Order(title, description, price);
+      DateTime date = new DateTime(2021, 05, 14);
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
@@ -35,7 +37,8 @@ namespace OrderTracker.Tests
       string title = "Bread";
       string description = "bread";
       int price = 142;
-      Order newOrder = new Order(title, description, price);
+      DateTime date = new DateTime(2021, 05, 14);
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
     }
@@ -45,9 +48,21 @@ namespace OrderTracker.Tests
       string title = "Bread";
       string description = "bread";
       int price = 142;
-      Order newOrder = new Order(title, description, price);
+      DateTime date = new DateTime(2021, 05, 14);
+      Order newOrder = new Order(title, description, price, date);
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
+    }
+    [TestMethod]
+    public void GetDate_ReturnsOrderDate_Int()
+    {
+      string title = "Bread";
+      string description = "bread";
+      int price = 142;
+      DateTime date = new DateTime(2021, 05, 14);
+      Order newOrder = new Order(title, description, price, date);
+      DateTime result = new DateTime(06 / 14 / 2021);
+      Assert.AreEqual(date, result);
     }
 
   }
