@@ -8,11 +8,18 @@ namespace VendorTracker.Models
     public string Description { get; set; }
     public int Price { get; set; }
     public int Date { get; set; }
+    public int Id { get; }
     private static List<Order> _instances = new List<Order> { };
 
-    // public Order()
-    // {
+    public Order(string orderTitle)
+    {
+      Title = orderTitle;
+      // Description = orderDescription;
+      // Price = orderPrice;
+      // Date = orderDate;
+      // _instances.Add(this);
+      // Id = _instances.Count;
+    }
 
-    // }
   }
 }
