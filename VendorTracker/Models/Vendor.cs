@@ -9,7 +9,7 @@ namespace VendorTracker.Models
     public string Description { get; set; }
     public List<Order> Orders { get; set; }
 
-    public Vendor(string vendorName, string vendorDescription)
+    public Vendor(string vendorName)
     {
 
     }
