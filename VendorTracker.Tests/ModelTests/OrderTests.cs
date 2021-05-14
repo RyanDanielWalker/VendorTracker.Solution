@@ -112,7 +112,7 @@ namespace OrderTracker.Tests
       DateTime date2 = new DateTime(2021, 05, 14);
       Order newOrder1 = new Order(title1, description1, price1, date1);
       Order newOrder2 = new Order(title2, description2, price2, date2);
-      Order result = Order.Find(40);
+      Order result = Order.Find(1);
       Assert.AreEqual(newOrder1, result);
     }
 
