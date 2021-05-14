@@ -96,7 +96,7 @@ namespace OrderTracker.Tests
       int price = 142;
       DateTime date = new DateTime(2021, 05, 14);
       Order newOrder = new Order(title, description, price, date);
-      int result = 32;
+      int result = newOrder.Id;
       Assert.AreEqual(1, result);
     }
 
