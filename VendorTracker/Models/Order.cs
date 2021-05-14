@@ -11,11 +11,11 @@ namespace VendorTracker.Models
     public int Id { get; }
     private static List<Order> _instances = new List<Order> { };
 
-    public Order(string orderTitle, string orderDescription, int price)
+    public Order(string orderTitle, string orderDescription, int orderPrice)
     {
       Title = orderTitle;
       Description = orderDescription;
-      // Price = orderPrice;
+      Price = orderPrice;
       // Date = orderDate;
       // _instances.Add(this);
       // Id = _instances.Count;

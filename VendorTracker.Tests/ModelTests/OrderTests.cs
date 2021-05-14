@@ -46,7 +46,7 @@ namespace OrderTracker.Tests
       string description = "bread";
       int price = 142;
       Order newOrder = new Order(title, description, price);
-      int result = 90;
+      int result = newOrder.Price;
       Assert.AreEqual(price, result);
     }
 
