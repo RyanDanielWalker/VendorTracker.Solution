@@ -24,7 +24,7 @@ namespace VendorTracker.Tests
     {
       string name = "Test Vendor";
       Vendor newVendor = new Vendor(name);
-      string result = "Not the same";
+      string result = newVendor.Name;
       Assert.AreEqual(name, result);
     }
   }
