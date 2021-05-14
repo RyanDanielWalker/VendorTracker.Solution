@@ -16,16 +16,27 @@ namespace OrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstancesOfOrder_Order()
     {
-      Order newOrder = new Order("test");
+      Order newOrder = new Order("test", "description");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod]
     public void GetTitle_ReturnsTitle_String()
     {
       string title = "Bread";
-      Order newOrder = new Order(title);
+      string description = "bread";
+      Order newOrder = new Order(title, description);
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
+    }
+    [TestMethod]
+    public void GetDescription_ReturnsOrderDescription_String()
+    {
+      string title = "Bread";
+      string description = "bread";
+      Order newOrder = new Order(title, description);
+      string result = "not like this";
+      Assert.AreEqual(title, result);
+
     }
   }
 }
