@@ -81,10 +81,10 @@ namespace VendorTracker.Tests
       Order newOrder = new Order(title, orderDescription, price, date);
       List<Order> newList = new List<Order> { newOrder };
       string name = "Test Vendor";
-      string description = "Test description";
-      Vendor newVendor = new Vendor(name, description);
+      string vendorDescription = "Test description";
+      Vendor newVendor = new Vendor(name, vendorDescription);
       newVendor.AddOrder(newOrder);
-      List<Order> result = new List<Order> { };
+      List<Order> result = newVendor.Orders;
       CollectionAssert.AreEqual(newList, result);
     }
 
