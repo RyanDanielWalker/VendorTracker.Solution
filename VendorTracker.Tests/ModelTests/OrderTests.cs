@@ -85,7 +85,7 @@ namespace OrderTracker.Tests
       Order newOrder1 = new Order(title1, description1, price1, date1);
       Order newOrder2 = new Order(title2, description2, price2, date2);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
-      List<Order> result = new List<Order> { };
+      List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
 
